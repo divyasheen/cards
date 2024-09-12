@@ -1,79 +1,115 @@
-.payment-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    height: 400px;
-    width: 400px;
-    margin: auto;
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    height: 100vh;
   }
   
-  .payment-option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    border-radius: 15px;
-   
-}
-@keyframes fade-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
+  .container {
+    margin-top: 150px;
+    margin-left: 150px;
+    width: 40%;
   }
-  100% {
-    opacity: 1;
+  .container_wrapper.active .container_logo {
+    /* opacity: 1; */
+  }
+  .container_wrapper.active .container_card-1,
+  .container_wrapper.active .container_card-2,
+  .container_wrapper.active .container_card-3,
+  .container_wrapper.active .container_card-4 {
     transform: translateX(0);
+    /* opacity: 1; */
   }
-}
-@keyframes fade-in-right {
-    0% {
-      opacity: 0;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(-50px);
-    }
+  .container_wrapper.active .container_bottom,
+  .container_wrapper.active .container_top {
+    transform: translateY(0);
+    /* opacity: 1; */
+  }
+  .container_bottom {
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    /* opacity: 0; */
+    /* transition: 1s ease; */
+    /* transition-delay: 2.4s; */
+    /* transform: translateY(-100%); */
+  }
+  .container__bottom img {
+    width: 100%;
+  }
+  .container_top {
+    margin-bottom: 4%;
+    display: flex;
+    align-items: center;
+    /* opacity: 0; */
+    /* transition: 1s ease; */
+    /* transition-delay: 2s; */
+    /* transform: translateY(100%); */
+  }
+  .container_top img {
+    width: 100%;
+  }
+  .container_main {
+    position: relative;
+    width: 100%;
+    padding-bottom: 85%;
+  }
+  .container_logo {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* transition: 1s ease; */
+    /* opacity: 0; */
+  }
+  .container_logo img {
+    width: 100%;
+  }
+  .container_card-1,
+  .container_card-2,
+  .container_card-3,
+  .container_card-4 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    /* opacity: 0; */
+    /* transition: 1s ease; */
+  }
+  .container_card-1 img,
+  .container_card-2 img,
+  .container_card-3 img,
+  .container_card-4 img {
+    width: 100%;
+  }
+  .container_card-1 {
+    left: 0;
+    top: 0;
+    /* transform: translateX(-100%); */
+    /* transition-delay: 0.4s; */
+  }
+  .container_card-2 {
+    right: 0;
+    top: 0;
+    /* transform: translateX(100%); */
+    /* transition-delay: 0.8s; */
+  }
+  .container_card-3 {
+    left: 0;
+    bottom: 0;
+    /* transform: translateX(-100%); */
+    /* transition-delay: 1.2s; */
+  }
+  .container_card-4 {
+    right: 0;
+    bottom: 0;
+    /* transform: translateX(100%); */
+    /* transition-delay: 1.6s; */
   }
   
-  .central-logo {
-   margin-top: 150px;
-   margin-left: -50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-  
-  .payment-option img {
-    max-width: 80%;
-    max-height: 80%;
-  }
-  
-  
-  .visa{
-    margin-left: 150px;
-    background-color: grey;
-    transition-delay: 0;
-    animation: fade-in-left 1.2s linear ;
-  }
-  .mastercard{
-    margin-left: -100px;
-    background-color: orange;
-    transition-delay: .4s;
-    animation: fade-in-right 1.2s linear;
-  }
-  .googlepay{
-    margin-left: 150px;
-    background-color: lightblue;
-    animation-delay: .8s;
-    animation: fade-in-left 1.2s linear;
-
-  }
-  .applepay{
-    margin-left: 250px;
-    background-color: lightslategray;
-    animation-delay: 1.2s;
-    animation: fade-in-right 1.2s linear;
-  }
