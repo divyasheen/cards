@@ -55,13 +55,13 @@
   .visa{
     margin-left: 150px;
     background-color: grey;
-    animation-delay: 0;
+    transition-delay: 0;
     animation: fade-in-left 1.2s linear ;
   }
   .mastercard{
     margin-left: -100px;
     background-color: orange;
-    animation-delay: .4s;
+    transition-delay: .4s;
     animation: fade-in-right 1.2s linear;
   }
   .googlepay{
