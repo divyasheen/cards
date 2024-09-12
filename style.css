@@ -1,0 +1,79 @@
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+  }
+  
+  .payment-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 15px;
+   
+}
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50px);
+    }
+  }
+  
+  .central-logo {
+   margin-top: 150px;
+   margin-left: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .payment-option img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  
+  .visa{
+    margin-left: 150px;
+    background-color: grey;
+    animation-delay: 0;
+    animation: fade-in-left 1.2s linear ;
+  }
+  .mastercard{
+    margin-left: -100px;
+    background-color: orange;
+    animation-delay: .4s;
+    animation: fade-in-right 1.2s linear;
+  }
+  .googlepay{
+    margin-left: 150px;
+    background-color: lightblue;
+    animation-delay: .8s;
+    animation: fade-in-left 1.2s linear;
+
+  }
+  .applepay{
+    margin-left: 250px;
+    background-color: lightslategray;
+    animation-delay: 1.2s;
+    animation: fade-in-right 1.2s linear;
+  }
