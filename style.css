@@ -1,115 +1,133 @@
 body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    height: 100vh;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 150px;
+  margin-left: 150px;
+  width: 40%;
+}
+
+.container_top {
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+animation: header ease-in 0.5s forwards;
+animation-delay: 2s;
+opacity: 0;
+}
+
+@keyframes header {
+from {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+.container_top img {
+  width: 100%;
+}
+.container_main {
+  position: relative;
+  width: 100%;
+  padding-bottom: 85%;
+}
+.container_logo {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_logo img {
+  width: 100%;
+}
+.container_bottom {
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  animation: footer ease-in 0.5s forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+@keyframes footer {
+from {
+  opacity: 0;
+  transform: translateY(50%);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+.container_bottom img {
+  width: 100%;
+}
+.container_card-1,
+.container_card-2,
+.container_card-3,
+.container_card-4 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+.container_card-1 img,
+.container_card-2 img,
+.container_card-3 img,
+.container_card-4 img {
+  width: 100%;
+}
+.container_card-1 {
+  left: 0;
+  top: 0;
+  animation-name: move-in;
+  animation-duration: 1s;
+  op
+}
+@keyframes move-in{
+  0%{
+    opacity: 0;
+    transform: translateX(-300px);
   }
-  
-  .container {
-    margin-top: 150px;
-    margin-left: 150px;
-    width: 40%;
+}
+.container_card-2 {
+  right: 0;
+  top: 0;
+  animation-name: move-out;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+@keyframes move-out{
+  0%{
+    opacity: 0;
+    transform: translateX(300px);
   }
-  .container_wrapper.active .container_logo {
-    /* opacity: 1; */
-  }
-  .container_wrapper.active .container_card-1,
-  .container_wrapper.active .container_card-2,
-  .container_wrapper.active .container_card-3,
-  .container_wrapper.active .container_card-4 {
-    transform: translateX(0);
-    /* opacity: 1; */
-  }
-  .container_wrapper.active .container_bottom,
-  .container_wrapper.active .container_top {
-    transform: translateY(0);
-    /* opacity: 1; */
-  }
-  .container_bottom {
-    margin-top: 4%;
-    display: flex;
-    align-items: center;
-    /* opacity: 0; */
-    /* transition: 1s ease; */
-    /* transition-delay: 2.4s; */
-    /* transform: translateY(-100%); */
-  }
-  .container__bottom img {
-    width: 100%;
-  }
-  .container_top {
-    margin-bottom: 4%;
-    display: flex;
-    align-items: center;
-    /* opacity: 0; */
-    /* transition: 1s ease; */
-    /* transition-delay: 2s; */
-    /* transform: translateY(100%); */
-  }
-  .container_top img {
-    width: 100%;
-  }
-  .container_main {
-    position: relative;
-    width: 100%;
-    padding-bottom: 85%;
-  }
-  .container_logo {
-    width: 40%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    /* transition: 1s ease; */
-    /* opacity: 0; */
-  }
-  .container_logo img {
-    width: 100%;
-  }
-  .container_card-1,
-  .container_card-2,
-  .container_card-3,
-  .container_card-4 {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 48%;
-    /* opacity: 0; */
-    /* transition: 1s ease; */
-  }
-  .container_card-1 img,
-  .container_card-2 img,
-  .container_card-3 img,
-  .container_card-4 img {
-    width: 100%;
-  }
-  .container_card-1 {
-    left: 0;
-    top: 0;
-    /* transform: translateX(-100%); */
-    /* transition-delay: 0.4s; */
-  }
-  .container_card-2 {
-    right: 0;
-    top: 0;
-    /* transform: translateX(100%); */
-    /* transition-delay: 0.8s; */
-  }
-  .container_card-3 {
-    left: 0;
-    bottom: 0;
-    /* transform: translateX(-100%); */
-    /* transition-delay: 1.2s; */
-  }
-  .container_card-4 {
-    right: 0;
-    bottom: 0;
-    /* transform: translateX(100%); */
-    /* transition-delay: 1.6s; */
-  }
-  
+}
+.container_card-3 {
+  left: 0;
+  bottom: 0;
+  animation-name: move-in;
+  animation-duration: 1s;
+  animation-delay: 1.2s; 
+}
+.container_card-4 {
+  right: 0;
+  bottom: 0;
+  animation-name: move-out;
+  animation-duration: 1s;
+  animation-delay: 1.6s; 
+}
